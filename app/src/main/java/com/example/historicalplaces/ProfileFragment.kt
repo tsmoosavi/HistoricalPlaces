@@ -32,7 +32,7 @@ lateinit var binding: FragmentProfileBinding
         buttonClickListener()
         context?.let {
             Glide.with(it)
-                .load("http://via.placeholder.com/300.png")
+                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXUA8i_XkolHaG72wChky5ycJP1xBBQ4gPA&usqp=CAU")
                 .into(binding.profileImage)
 //                .error(R.drawable.ic_baseline_exit_to_app_24)
         }
