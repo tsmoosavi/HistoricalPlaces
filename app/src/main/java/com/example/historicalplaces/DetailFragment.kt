@@ -19,7 +19,6 @@ lateinit var binding: FragmentDetailBinding
         binding =  FragmentDetailBinding.inflate(inflater,container,false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
