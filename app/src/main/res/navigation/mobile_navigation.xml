@@ -22,7 +22,14 @@
         android:id="@+id/settingFragment"
         android:name="com.example.historicalplaces.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.historicalplaces.DetailFragment"

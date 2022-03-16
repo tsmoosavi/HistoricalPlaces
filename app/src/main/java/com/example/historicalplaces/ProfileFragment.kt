@@ -33,8 +33,10 @@ lateinit var binding: FragmentProfileBinding
         context?.let {
             Glide.with(it)
                 .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXUA8i_XkolHaG72wChky5ycJP1xBBQ4gPA&usqp=CAU")
+                .circleCrop()
+                .error(R.drawable.ic_baseline_person_24)
                 .into(binding.profileImage)
-//                .error(R.drawable.ic_baseline_exit_to_app_24)
+//
         }
     }
     private fun showSavedInfo() {

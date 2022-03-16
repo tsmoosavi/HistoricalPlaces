@@ -39,6 +39,9 @@ class Home_Fragment : Fragment() {
         context?.let {
             Glide.with(it)
                 .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohoAxiP5fZ4qURf4wcTcjkHIgzb_U4DxMWw&usqp=CAU")
+//                .transform(cropCircleTransformation(context))
+                .error(R.drawable.ic_launcher_background)
+                .circleCrop()
                 .into(binding.image4)
         }
         binding.ll4.setOnClickListener{
@@ -50,7 +53,10 @@ class Home_Fragment : Fragment() {
         context?.let {
             Glide.with(it)
                 .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfoAez9VXW5YqYe6vlAILHRKHw4ajkU5qjdQ&usqp=CAU")
+                .error(R.drawable.ic_launcher_background)
+                .circleCrop()
                 .into(binding.image3)
+
         }
         binding.ll3.setOnClickListener{
             findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
@@ -61,7 +67,10 @@ class Home_Fragment : Fragment() {
         context?.let {
             Glide.with(it)
                 .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPWpEtc4bJm2AmjD9ZY9zEtRz5YXJxB-voZQ&usqp=CAU")
+                .error(R.drawable.ic_launcher_background)
+                .circleCrop()
                 .into(binding.image2)
+
         }
         binding.ll2.setOnClickListener{
             findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
@@ -72,6 +81,8 @@ class Home_Fragment : Fragment() {
         context?.let {
             Glide.with(it)
                 .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdSGphxGM4JUulkhcCsU4KuYxwIJsJ5oOng&usqp=CAU")
+                .error(R.drawable.ic_launcher_background)
+                .circleCrop()
                 .into(binding.image1)
         }
         binding.ll1.setOnClickListener{
