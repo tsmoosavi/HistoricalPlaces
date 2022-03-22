@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.historicalplaces.databinding.FragmentHomeBinding
 
-class Home_Fragment : Fragment() {
+class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +31,6 @@ class Home_Fragment : Fragment() {
         secondPlace()
         thirdPlace()
         forthPlace()
-
-
     }
 
     private fun forthPlace() {

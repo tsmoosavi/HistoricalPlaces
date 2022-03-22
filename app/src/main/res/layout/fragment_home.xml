@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home_Fragment"
+    tools:context=".HomeFragment"
     android:orientation="vertical"
     android:layout_margin="20dp">
     <LinearLayout
@@ -29,7 +29,6 @@
             android:id="@+id/image1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
             android:layout_gravity="center"/>
 
         <TextView
@@ -53,7 +52,6 @@
                 android:id="@+id/image2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -77,7 +75,6 @@
                 android:id="@+id/image3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -101,7 +98,6 @@
                 android:id="@+id/image4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
                 android:layout_gravity="center"/>
 
             <TextView

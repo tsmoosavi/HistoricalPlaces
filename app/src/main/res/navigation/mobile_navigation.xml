@@ -6,9 +6,9 @@
     app:startDestination="@id/home_Fragment">
     <fragment
         android:id="@+id/home_Fragment"
-        android:name="com.example.historicalplaces.Home_Fragment"
-        android:label="fragment_home_"
-        tools:layout="@layout/fragment_home_" >
+        android:name="com.example.historicalplaces.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home_Fragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -16,23 +16,20 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.historicalplaces.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.historicalplaces.SettingFragment"
-        android:label="fragment_setting"
+        android:label="setting"
         tools:layout="@layout/fragment_setting" >
         <action
             android:id="@+id/action_settingFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
-            android:id="@+id/action_settingFragment_to_profileFragment2"
             app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.historicalplaces.DetailFragment"
-        android:label="fragment_detail"
+        android:label="detail"
         tools:layout="@layout/fragment_detail" />
 </navigation>
