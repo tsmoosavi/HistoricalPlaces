@@ -1,8 +1,11 @@
 package com.example.historicalplaces
 
+import android.os.Parcelable
 import androidx.lifecycle.ViewModel
+import kotlinx.android.parcel.Parcelize
 
-data class Place(var pictureURL:String, var name: Int, var explanation:Int)
+@Parcelize
+data class Place(var pictureURL:String, var name: Int, var explanation:Int):Parcelable
 class placesDetailVm:ViewModel() {
     var historicalPlacesList = arrayListOf<Place>()
     var place1 = Place("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdSGphxGM4JUulkhcCsU4KuYxwIJsJ5oOng&usqp=CAU",R.string.firstPlace,R.string.firstDetail)
@@ -15,5 +18,4 @@ class placesDetailVm:ViewModel() {
         historicalPlacesList.add(place3)
         historicalPlacesList.add(place4)
     }
-
 }

@@ -13,7 +13,8 @@ import com.example.historicalplaces.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
-    val places:placesDetailVm by activityViewModels ()
+    val placesVm:placesDetailVm by activityViewModels ()
+    var layoutList = arrayListOf<View>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,20 +27,37 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater,container,false)
         // Inflate the layout for this fragment
         return binding.root
+//       (binding.ll1,binding.ll2,binding.ll3, binding.ll4)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initView()
+        binding.ll1.setOnClickListener{
+            var action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(placesVm.place1)
+            findNavController().navigate(action)
+        }
+//        clicklistener()
+
+    }
+
+    private fun clicklistener() {
+        for(i in 0 until layoutList.size)
+       layoutList[i].setOnClickListener{
+           var action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(placesVm.historicalPlacesList[i])
+           findNavController().navigate(action)
+        }
+    }
+
+    private fun initView() {
         firstPlace()
         secondPlace()
         thirdPlace()
         forthPlace()
     }
-
     private fun forthPlace() {
 
             Glide.with(this)
-                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohoAxiP5fZ4qURf4wcTcjkHIgzb_U4DxMWw&usqp=CAU")
-//                .transform(cropCircleTransformation(context))
+                .load(placesVm.place4.pictureURL)
                 .error(R.drawable.ic_launcher_background)
                 .circleCrop()
                 .into(binding.image4)
@@ -50,7 +68,7 @@ class HomeFragment : Fragment() {
 
     private fun thirdPlace() {
             Glide.with(this)
-                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfoAez9VXW5YqYe6vlAILHRKHw4ajkU5qjdQ&usqp=CAU")
+                .load(placesVm.place3.pictureURL)
                 .error(R.drawable.ic_launcher_background)
                 .circleCrop()
                 .into(binding.image3)
@@ -62,7 +80,7 @@ class HomeFragment : Fragment() {
 
     private fun secondPlace() {
             Glide.with(this)
-                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPWpEtc4bJm2AmjD9ZY9zEtRz5YXJxB-voZQ&usqp=CAU")
+                .load(placesVm.place2.pictureURL)
                 .error(R.drawable.ic_launcher_background)
                 .circleCrop()
                 .into(binding.image2)
@@ -74,7 +92,7 @@ class HomeFragment : Fragment() {
 
     private fun firstPlace() {
         Glide.with(this)
-                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdSGphxGM4JUulkhcCsU4KuYxwIJsJ5oOng&usqp=CAU")
+                .load(placesVm.place1.pictureURL)
                 .error(R.drawable.ic_launcher_background)
                 .circleCrop()
                 .into(binding.image1)
@@ -83,6 +101,13 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
 
         }
+    }
+
+    fun addList(){
+        layoutList.add(binding.ll1)
+        layoutList.add(binding.ll2)
+        layoutList.add(binding.ll3)
+        layoutList.add(binding.ll4)
     }
 
 

@@ -31,5 +31,9 @@
         android:id="@+id/detailFragment"
         android:name="com.example.historicalplaces.DetailFragment"
         android:label="detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="place"
+            app:argType="com.example.historicalplaces.Place" />
+    </fragment>
 </navigation>
