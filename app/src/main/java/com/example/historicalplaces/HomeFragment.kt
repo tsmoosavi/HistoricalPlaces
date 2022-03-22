@@ -14,7 +14,7 @@ import com.example.historicalplaces.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     val placesVm:placesDetailVm by activityViewModels ()
-    var layoutList = arrayListOf<View>()
+//    var layoutList = arrayListOf<View>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,15 +32,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        binding.ll1.setOnClickListener{
-            var action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(placesVm.place1)
-            findNavController().navigate(action)
-        }
-//        clicklistener()
+//        binding.ll1.setOnClickListener{
+//            var action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(placesVm.historicalPlacesList[0])
+//            findNavController().navigate(action)
+//        }
+        clicklistener()
 
     }
 
     private fun clicklistener() {
+        var layoutList = arrayListOf(binding.ll1, binding.ll2, binding.ll3, binding.ll4)
         for(i in 0 until layoutList.size)
        layoutList[i].setOnClickListener{
            var action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(placesVm.historicalPlacesList[i])
@@ -103,12 +104,12 @@ class HomeFragment : Fragment() {
         }
     }
 
-    fun addList(){
-        layoutList.add(binding.ll1)
-        layoutList.add(binding.ll2)
-        layoutList.add(binding.ll3)
-        layoutList.add(binding.ll4)
-    }
+//    fun addList(){
+//        layoutList.add(binding.ll1)
+//        layoutList.add(binding.ll2)
+//        layoutList.add(binding.ll3)
+//        layoutList.add(binding.ll4)
+//    }
 
 
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Binder
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
@@ -44,9 +45,11 @@ class DetailFragment : Fragment() {
     }
 
     private fun shareDetail() {
+        var message = args.place.explanation
+        Toast.makeText(context, args.place.name, Toast.LENGTH_SHORT).show()
         val sendIntent: Intent = Intent().apply {
             action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, args.place.explanation)
+            putExtra(Intent.EXTRA_TEXT,getText(message))
             type = "text/plain"
         }
 
