@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.historicalplaces.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
@@ -29,8 +30,13 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setNumber()
-        placeDetails.numberOfViews = 3
+        buttonClick()
+    }
 
+    private fun buttonClick() {
+        binding.editBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_settingFragment_to_profileFragment)
+        }
     }
 
     private fun setNumber() {

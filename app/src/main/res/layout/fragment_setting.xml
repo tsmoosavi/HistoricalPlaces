@@ -20,15 +20,44 @@
             android:layout_margin="10dp"
             android:textSize="24sp"
             android:gravity="center"
-            android:textColor="@color/red"/>
+            android:textColor="@color/purple_200"/>
 
 
         <SeekBar
             android:id="@+id/seekBar"
             android:layout_width="374dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:min="1"
             android:max="4" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/orange"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/editText"
+            android:textColor="@color/darkGreen"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editButton"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/orange"
+            android:layout_marginTop="30dp"/>
+
     </LinearLayout>
 
 
