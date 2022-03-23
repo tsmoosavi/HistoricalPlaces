@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import androidx.fragment.app.activityViewModels
 import com.example.historicalplaces.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
-lateinit var binding: FragmentSettingBinding
-override fun onCreate(savedInstanceState: Bundle?) {
+    lateinit var binding: FragmentSettingBinding
+    val placeDetails:placesDetailVm by activityViewModels()
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
@@ -25,7 +28,23 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setNumber()
+        placeDetails.numberOfViews = 3
 
+    }
+
+    private fun setNumber() {
+        binding.seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                placeDetails.numberOfViews = binding.seekBar.progress
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+            }
+        })
     }
 
 
