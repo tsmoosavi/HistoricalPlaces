@@ -45,10 +45,17 @@ class HomeFragment : Fragment() {
     }
 
     private fun initView() {
+        var layoutList = arrayListOf(binding.ll1, binding.ll2, binding.ll3, binding.ll4)
+        for(i in 0 until layoutList.size){
+            layoutList[i].visibility = View.GONE
+        }
         firstPlace()
         secondPlace()
         thirdPlace()
         forthPlace()
+        for(i in 0 until placesVm.numberOfViews){
+          layoutList[i].visibility = View.VISIBLE
+        }
     }
     private fun forthPlace() {
 
