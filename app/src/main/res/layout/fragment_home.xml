@@ -40,6 +40,11 @@
             android:gravity="center"
             android:textColor="@color/blue"
             android:layout_gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/orange"
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 
@@ -63,6 +68,11 @@
                 android:text="@string/bam"
                 android:textColor="@color/red"
                 android:textSize="30sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/orange"
+                android:layout_marginTop="30dp"/>
 
         </LinearLayout>
 
@@ -86,6 +96,11 @@
                 android:gravity="center"
                 android:textColor="@color/orange"
                 android:layout_gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/orange"
+                android:layout_marginTop="30dp"/>
 
         </LinearLayout>
 

@@ -57,8 +57,33 @@
             android:layout_height="1dp"
             android:background="@color/orange"
             android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تم مورد نظر خود را انتخاب کنید."
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/orange" />
+        <Button
+            android:id="@+id/light"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="@string/light"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="@string/dark"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
+
 
 
 </ScrollView>

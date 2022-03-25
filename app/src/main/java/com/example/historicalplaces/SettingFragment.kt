@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.historicalplaces.databinding.FragmentSettingBinding
@@ -30,6 +31,20 @@ class SettingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setNumber()
         buttonClick()
+        binding.dark.setOnClickListener{
+            darkTheme()
+        }
+        binding.light.setOnClickListener{
+            lightTheme()
+        }
+    }
+
+    private fun lightTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    private fun darkTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
     }
 
     private fun buttonClick() {

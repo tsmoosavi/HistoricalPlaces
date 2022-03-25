@@ -28,4 +28,6 @@
     <string name="chooseItem">شما می توانید تعداد نتایچ قابل مشاهده را انتخاب کنید:</string>
     <string name="editText">می توانید مشخصات خود را ویرایش کنید.</string>
     <string name="editButton">ویرایش اطلاعات</string>
+    <string name="light">روشن</string>
+    <string name="dark">تیره</string>
 </resources>
