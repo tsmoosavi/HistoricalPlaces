@@ -32,6 +32,7 @@ class SettingFragment : Fragment() {
         setNumber()
         buttonClick()
         binding.seekBar.progress = placeDetails.numberOfViews
+        binding.seekBarNumber.text = placeDetails.numberOfViews.toString()
         binding.dark.setOnClickListener{
             darkTheme()
         }
@@ -58,7 +59,7 @@ class SettingFragment : Fragment() {
         binding.seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 placeDetails.numberOfViews = binding.seekBar.progress
-                binding.seekBarNumber.text = binding.seekBar.progress.toString()
+                binding.seekBarNumber.text = placeDetails.numberOfViews.toString()
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
