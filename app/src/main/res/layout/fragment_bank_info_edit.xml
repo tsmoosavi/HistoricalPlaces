@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BankInfoEditFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/bankIntroEdit"
+            android:textSize="18sp"
+            android:background="@drawable/pink_outline_txv"/>
+        <TextView
+            android:id="@+id/accountNumberTxv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accountNumber"
+            android:layout_margin="10dp"
+            android:background="@drawable/pink_outline_txv"/>
+        <EditText
+            android:id="@+id/accountNumber"
+            android:hint="@string/accountNumberEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/second_outline_txv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/cardNumber"
+            android:background="@drawable/pink_outline_txv" />
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cardNumberEdit"
+            android:layout_margin="10dp"
+            android:background="@drawable/second_outline_txv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/shabaNumber"
+            android:background="@drawable/pink_outline_txv"/>
+        <EditText
+            android:id="@+id/shabaNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/shabaNumberEdit"
+            android:background="@drawable/second_outline_txv"/>
 
-</FrameLayout>
+    </LinearLayout>
+</ScrollView>

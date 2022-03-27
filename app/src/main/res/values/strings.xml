@@ -31,7 +31,11 @@
     <string name="light">روشن</string>
     <string name="dark">تیره</string>
     <string name="bankIntro">اطلاعات حساب بانکی شما:</string>
+    <string name="bankIntroEdit">اطلاعات حساب بانکی خود را وارد کنید:</string>
     <string name="accountNumber">شماره حساب:</string>
     <string name="cardNumber">شماره کارت:</string>
     <string name="shabaNumber">شماره شبا:</string>
+    <string name="accountNumberEdit">شماره حساب خود را اینجا وارد کنید.</string>
+    <string name="cardNumberEdit">شماره کارت خود را اینجا وارد کنید.</string>
+    <string name="shabaNumberEdit">شماره شبا خود را اینجا وارد کنید.</string>
 </resources>
