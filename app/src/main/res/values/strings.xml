@@ -33,4 +33,5 @@
     <string name="bankIntro">اطلاعات حساب بانکی شما:</string>
     <string name="accountNumber">شماره حساب:</string>
     <string name="cardNumber">شماره کارت:</string>
+    <string name="shabaNumber">شماره شبا:</string>
 </resources>
