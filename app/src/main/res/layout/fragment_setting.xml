@@ -21,7 +21,11 @@
             android:textSize="24sp"
             android:gravity="center"
             android:textColor="@color/purple_200"/>
-
+            <TextView
+                android:id="@+id/seekBarNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
 
         <SeekBar
             android:id="@+id/seekBar"
