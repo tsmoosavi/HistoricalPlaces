@@ -63,6 +63,7 @@ class SettingFragment : Fragment() {
             }
 
             override fun onStopTrackingTouch(p0: SeekBar?) {
+
             }
         })
     }
