@@ -15,6 +15,9 @@
         <argument
             android:name="numberOfLayouts"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_home_Fragment_to_bankAccountInfoFragment"
+            app:destination="@id/bankAccountInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -39,4 +42,9 @@
             android:name="place"
             app:argType="com.example.historicalplaces.Place" />
     </fragment>
+    <fragment
+        android:id="@+id/bankAccountInfoFragment"
+        android:name="com.example.historicalplaces.BankAccountInfoFragment"
+        android:label="fragment_bank_account_info"
+        tools:layout="@layout/fragment_bank_account_info" />
 </navigation>

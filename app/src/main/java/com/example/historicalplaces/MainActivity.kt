@@ -1,7 +1,10 @@
 package com.example.historicalplaces
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -9,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
 import com.example.historicalplaces.databinding.ActivityMainBinding
 
@@ -47,5 +51,24 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.home_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.bankAccountInfoFragment -> {
+                goToBankInfoPage()
+                    true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun goToBankInfoPage() {
+//        findNavController().navigate(R.id.action_home_Fragment_to_bankAccountInfoFragment)
     }
 }

@@ -1,6 +1,5 @@
 package com.example.historicalplaces
 
-import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -77,7 +76,7 @@ class HomeFragment : Fragment() {
                 .into(binding.image3)
 
         binding.ll3.setOnClickListener{
-            findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
+          findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
         }
     }
 

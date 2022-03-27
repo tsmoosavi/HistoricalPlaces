@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/bankIntro" />
+        android:text="@string/bankIntro"
+        android:background="@drawable/outline_txv"/>
     <TextView
         android:id="@+id/accountNumberTxv"
         android:layout_width="match_parent"
