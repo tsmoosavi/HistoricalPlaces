@@ -30,4 +30,7 @@
     <string name="editButton">ویرایش اطلاعات</string>
     <string name="light">روشن</string>
     <string name="dark">تیره</string>
+    <string name="bankIntro">اطلاعات حساب بانکی شما:</string>
+    <string name="accountNumber">شماره حساب:</string>
+    <string name="cardNumber">شماره کارت:</string>
 </resources>
