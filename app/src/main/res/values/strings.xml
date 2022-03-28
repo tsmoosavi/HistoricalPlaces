@@ -41,4 +41,5 @@
     <string name="bankInfoEdit">اطلاعات حساب بانکی خود را ویرایش کنید.</string>
     <string name="bankInfoEditBtn">ویرایش اطلاعات بانکی</string>
     <string name="registerChanges">ثبت تغییرات</string>
+    <string name="point">پند روز</string>
 </resources>

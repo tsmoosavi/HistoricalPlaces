@@ -2,6 +2,7 @@ package com.example.historicalplaces
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -29,7 +30,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initView()
         clicklistener()
+        fabClick()
 
+    }
+
+    private fun fabClick() {
+        binding.pointFab.setOnClickListener{
+            Toast.makeText(context, Repository.randomsentence(), Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun clicklistener() {
@@ -104,24 +112,25 @@ class HomeFragment : Fragment() {
     }
 
 
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        super.onCreateOptionsMenu(menu, inflater)
-//        inflater.inflate(R.menu.home_menu, menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.bankAccountInfoFragment -> {
-//                goToBankInfoPage()
-//                true
-//            }
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
-//
-//    private fun goToBankInfoPage() {
-//        findNavController().navigate(R.id.action_home_Fragment_to_bankAccountInfoFragment)
-//    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.home_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.bankAccountInfoFragment -> {
+                goToBankInfoPage()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun goToBankInfoPage() {
+        findNavController().navigate(R.id.action_home_Fragment_to_bankAccountInfoFragment)
+    }
+
 
 
 }

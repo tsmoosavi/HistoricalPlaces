@@ -53,24 +53,24 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.home_menu, menu)
-        return true
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.bankAccountInfoFragment -> {
-                goToBankInfoPage()
-                    true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        val inflater: MenuInflater = menuInflater
+//        inflater.inflate(R.menu.home_menu, menu)
+//        return true
+//    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.bankAccountInfoFragment -> {
+//                goToBankInfoPage()
+//                    true
+//            }
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
 
-    private fun goToBankInfoPage() {
+//    private fun goToBankInfoPage() {
 //        Navigation.findNavController( this, R.id.nav_host_fragment_content_main) .navigate(R.id.action_home_Fragment_to_bankAccountInfoFragment)
-        Navigation.findNavController(this, R.id.nav_host_fragment_content_main).navigate(R.id.bankAccountInfoFragment)
+//        Navigation.findNavController(this, R.id.nav_host_fragment_content_main).navigate(R.id.bankAccountInfoFragment)
 
-    }
+//    }
 }
