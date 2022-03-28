@@ -1,5 +1,7 @@
 package com.example.historicalplaces
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,5 +25,17 @@ class BankInfoEditFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        saveInfo()
+    }
 
+    private fun saveInfo() {
+        var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+        var editor = saveInfo.edit()
+        editor.putString("accountNumber",binding.accountNumber.toString())
+        editor.putString("cardNumber",binding.cardNumber.toString())
+        editor.putString("shabaNumber",binding.shabaNumber.toString())
+        editor.apply()
+    }
 }
