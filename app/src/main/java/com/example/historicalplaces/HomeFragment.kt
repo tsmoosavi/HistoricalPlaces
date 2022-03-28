@@ -1,10 +1,8 @@
 package com.example.historicalplaces
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
@@ -15,6 +13,7 @@ class HomeFragment : Fragment() {
     val placesVm:placesDetailVm by activityViewModels ()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        setHasOptionsMenu(true)
 
     }
 
@@ -23,9 +22,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater,container,false)
-        // Inflate the layout for this fragment
         return binding.root
-//       (binding.ll1,binding.ll2,binding.ll3, binding.ll4)
+
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -104,7 +102,26 @@ class HomeFragment : Fragment() {
 
         }
     }
-    
+
+
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        super.onCreateOptionsMenu(menu, inflater)
+//        inflater.inflate(R.menu.home_menu, menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.bankAccountInfoFragment -> {
+//                goToBankInfoPage()
+//                true
+//            }
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
+//
+//    private fun goToBankInfoPage() {
+//        findNavController().navigate(R.id.action_home_Fragment_to_bankAccountInfoFragment)
+//    }
 
 
 }

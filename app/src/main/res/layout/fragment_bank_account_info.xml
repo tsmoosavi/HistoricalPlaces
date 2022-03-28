@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BankAccountInfoFragment">
+    tools:context=".BankAccountInfoFragment"
+    android:background="@drawable/second_outline_txv">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         android:layout_margin="10dp"
         android:text="@string/bankIntro"
         android:textSize="18sp"
-        android:background="@drawable/pink_outline_txv"/>
+        android:background="@drawable/second_outline_txv"/>
     <TextView
         android:id="@+id/accountNumberTxv"
         android:layout_width="match_parent"
