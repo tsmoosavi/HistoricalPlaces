@@ -62,6 +62,12 @@
             android:inputType="number"
             android:background="@drawable/second_outline_txv"/>
 
+        <Button
+            android:id="@+id/EditButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerChanges" />
+
 
     </LinearLayout>
 </ScrollView>

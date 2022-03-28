@@ -1,21 +1,19 @@
 package com.example.historicalplaces
 
 import android.os.Bundle
-import android.os.Handler
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.findNavController
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
-import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.historicalplaces.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +24,8 @@ class MainActivity : AppCompatActivity() {
 
        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.appBarMain.toolbar)
+        setSupportActionBar(binding.appBar.toolbar)
+//        setSupportActionBar(binding.appBarMain.toolbar)
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)

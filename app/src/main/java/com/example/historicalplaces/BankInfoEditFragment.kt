@@ -27,15 +27,29 @@ class BankInfoEditFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        saveInfo()
+        showInfo()
+        clickListener()
+    }
+
+    private fun showInfo() {
+        var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+        binding.accountNumber.setText(saveInfo.getString("accountNumber",null))
+        binding.cardNumber.setText(saveInfo.getString("cardNumber",null))
+        binding.shabaNumber.setText(saveInfo.getString("shabaNumber",null))
+    }
+
+    private fun clickListener() {
+        binding.EditButton.setOnClickListener{
+            saveInfo()
+        }
     }
 
     private fun saveInfo() {
         var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
         var editor = saveInfo.edit()
-        editor.putString("accountNumber",binding.accountNumber.toString())
-        editor.putString("cardNumber",binding.cardNumber.toString())
-        editor.putString("shabaNumber",binding.shabaNumber.toString())
+        editor.putString("accountNumber",binding.accountNumber.text.toString())
+        editor.putString("cardNumber",binding.cardNumber.text.toString())
+        editor.putString("shabaNumber",binding.shabaNumber.text.toString())
         editor.apply()
     }
 }
