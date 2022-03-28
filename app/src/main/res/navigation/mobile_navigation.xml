@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_settingFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_bankInfoEditFragment"
+            app:destination="@id/bankInfoEditFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -47,4 +50,9 @@
         android:name="com.example.historicalplaces.BankAccountInfoFragment"
         android:label="fragment_bank_account_info"
         tools:layout="@layout/fragment_bank_account_info" />
+    <fragment
+        android:id="@+id/bankInfoEditFragment"
+        android:name="com.example.historicalplaces.BankInfoEditFragment"
+        android:label="fragment_bank_info_edit"
+        tools:layout="@layout/fragment_bank_info_edit" />
 </navigation>

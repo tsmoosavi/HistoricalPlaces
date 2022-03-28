@@ -30,7 +30,9 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setNumber()
-        buttonClick()
+        personalInfoEditButtonClick()
+        bankInfoEditButtonClick()
+
         binding.seekBar.progress = placeDetails.numberOfViews
         binding.seekBarNumber.text = placeDetails.numberOfViews.toString()
         binding.dark.setOnClickListener{
@@ -38,6 +40,12 @@ class SettingFragment : Fragment() {
         }
         binding.light.setOnClickListener{
             lightTheme()
+        }
+    }
+
+    private fun bankInfoEditButtonClick() {
+        binding.bankInfoEditBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_settingFragment_to_bankInfoEditFragment)
         }
     }
 
@@ -49,8 +57,8 @@ class SettingFragment : Fragment() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
     }
 
-    private fun buttonClick() {
-        binding.editBtn.setOnClickListener{
+    private fun personalInfoEditButtonClick() {
+        binding.personalInfoEditBtn.setOnClickListener{
             findNavController().navigate(R.id.action_settingFragment_to_profileFragment)
         }
     }

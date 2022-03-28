@@ -44,13 +44,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text="@string/editText"
             android:textColor="@color/darkGreen"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/editBtn"
+            android:id="@+id/personalInfoEditBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/editButton"
@@ -67,6 +67,7 @@
             android:text="تم مورد نظر خود را انتخاب کنید."
             android:textSize="20sp"
             android:gravity="center"
+            android:layout_marginTop="20dp"
             android:textColor="@color/orange" />
         <Button
             android:id="@+id/light"
@@ -85,6 +86,26 @@
             android:text="@string/dark"
             android:textSize="20sp"
             android:layout_gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/orange"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/bankInfoEdit"
+            android:textColor="@color/darkGreen"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/bankInfoEditBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bankInfoEditBtn"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

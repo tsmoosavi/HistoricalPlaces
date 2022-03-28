@@ -38,4 +38,6 @@
     <string name="accountNumberEdit">شماره حساب خود را اینجا وارد کنید.</string>
     <string name="cardNumberEdit">شماره کارت خود را اینجا وارد کنید.</string>
     <string name="shabaNumberEdit">شماره شبا خود را اینجا وارد کنید.</string>
+    <string name="bankInfoEdit">اطلاعات حساب بانکی خود را ویرایش کنید.</string>
+    <string name="bankInfoEditBtn">ویرایش اطلاعات بانکی</string>
 </resources>
