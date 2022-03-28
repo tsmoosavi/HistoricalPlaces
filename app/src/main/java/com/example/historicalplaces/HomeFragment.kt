@@ -13,7 +13,7 @@ class HomeFragment : Fragment() {
     val placesVm:placesDetailVm by activityViewModels ()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setHasOptionsMenu(true)
+        setHasOptionsMenu(true)
 
     }
 
