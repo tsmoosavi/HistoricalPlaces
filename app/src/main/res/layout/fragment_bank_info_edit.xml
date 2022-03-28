@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/bankIntroEdit"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:background="@drawable/pink_outline_txv"/>
         <TextView
             android:id="@+id/accountNumberTxv"
@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/accountNumber"
             android:layout_margin="10dp"
+            style="@style/txvStyle"
             android:background="@drawable/pink_outline_txv"/>
         <EditText
             android:id="@+id/accountNumber"
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/cardNumber"
+            style="@style/txvStyle"
             android:background="@drawable/pink_outline_txv" />
         <EditText
             android:id="@+id/cardNumber"
@@ -52,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/shabaNumber"
+            style="@style/txvStyle"
             android:background="@drawable/pink_outline_txv"/>
         <EditText
             android:id="@+id/shabaNumber"
