@@ -59,7 +59,7 @@ class SettingFragment : Fragment() {
 
     private fun personalInfoEditButtonClick() {
         binding.personalInfoEditBtn.setOnClickListener{
-            findNavController().navigate(R.id.action_settingFragment_to_profileFragment)
+            findNavController().navigate(R.id.action_settingFragment_to_personalInfoEditFragment22)
         }
     }
 

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.historicalplaces.databinding.FragmentPersonalInfoEditBinding
 
 class PersonalInfoEditFragment : Fragment() {
@@ -56,6 +57,7 @@ class PersonalInfoEditFragment : Fragment() {
         editor.putString("savedPhone",binding.phone.text.toString())
         editor.putString("urlPicture",binding.profilePicture.text.toString())
         editor.apply()
+        Toast.makeText(context,"مشخصات شما ثبت شد.",Toast.LENGTH_SHORT).show()
     }
 
     fun isfielsFull():Boolean{

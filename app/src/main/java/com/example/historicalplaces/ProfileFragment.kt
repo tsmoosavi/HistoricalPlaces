@@ -29,6 +29,7 @@ lateinit var binding: FragmentProfileBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showSavedInfo()
+
     }
     private fun showSavedInfo() {
         var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
@@ -42,8 +43,9 @@ lateinit var binding: FragmentProfileBinding
             .circleCrop()
             .error(R.drawable.ic_baseline_person_24)
             .into(binding.profileImage)
-
     }
-
+    fun txvClick(view: View){
+        Toast.makeText(context, "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.", Toast.LENGTH_SHORT).show()
+    }
 
 }
