@@ -30,9 +30,6 @@
         android:label="setting"
         tools:layout="@layout/fragment_setting" >
         <action
-            android:id="@+id/action_settingFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
             android:id="@+id/action_settingFragment_to_bankInfoEditFragment"
             app:destination="@id/bankInfoEditFragment" />
     </fragment>
