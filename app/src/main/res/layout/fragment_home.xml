@@ -39,6 +39,7 @@
             android:textSize="20sp"
             android:layout_gravity="center"
             android:gravity="center"
+            android:layout_marginBottom="40dp"
             android:textColor="@color/purple_200"/>
     <LinearLayout
         android:id="@+id/ll1"
@@ -48,9 +49,9 @@
         <ImageView
             android:id="@+id/image1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_gravity="center"
-            android:background="@drawable/second_outline_txv"/>
+            android:layout_margin="10dp"/>
 
         <TextView
             android:id="@+id/name1"
@@ -59,6 +60,7 @@
             android:text="@string/firstPlace"
             android:textSize="30sp"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:textColor="@color/blue"
             android:layout_gravity="center"/>
         <View
@@ -77,8 +79,9 @@
             <ImageView
                 android:id="@+id/image2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/name2"
@@ -86,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:layout_marginTop="20dp"
                 android:text="@string/bam"
                 android:textColor="@color/red"
                 android:textSize="30sp" />
@@ -105,8 +109,9 @@
             <ImageView
                 android:id="@+id/image3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/name3"
@@ -114,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hegmatane"
                 android:textSize="30sp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:textColor="@color/orange"
                 android:layout_gravity="center"/>
@@ -133,8 +139,9 @@
             <ImageView
                 android:id="@+id/image4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/name4"
@@ -142,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/jamshid"
                 android:gravity="center"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/green"
                 android:textSize="30sp"
                 android:layout_gravity="center"/>
@@ -160,8 +168,9 @@
             <ImageView
                 android:id="@+id/image5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/name5"
@@ -169,6 +178,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/mosque"
                 android:gravity="center"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/purple_500"
                 android:textSize="30sp"
                 android:layout_gravity="center"/>
@@ -187,8 +197,9 @@
             <ImageView
                 android:id="@+id/image6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/name6"
@@ -196,6 +207,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hafezie"
                 android:gravity="center"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/pink"
                 android:textSize="30sp"
                 android:layout_gravity="center"/>
