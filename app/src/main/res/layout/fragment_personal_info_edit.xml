@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersonalInfoEditFragment">
+    tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="@string/fullName"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:background="@drawable/second_outline_txv"/>
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="@string/id"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:maxLength="10"
+            android:background="@drawable/pink_outline_txv"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:background="@drawable/second_outline_txv"/>
+
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="@string/address"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:background="@drawable/pink_outline_txv"
+            />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="@string/phone"
+            android:inputType="number"
+            android:maxLength="11"
+            android:minHeight="48dp"
+            android:background="@drawable/second_outline_txv"/>
+        <EditText
+            android:id="@+id/profilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="@string/profPic"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:background="@drawable/pink_outline_txv"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F66294"
+            android:text="@string/register"
+            app:cornerRadius="20dp">
+
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+</ScrollView>
