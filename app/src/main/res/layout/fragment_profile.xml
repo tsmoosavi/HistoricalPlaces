@@ -10,7 +10,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="5dp">
 
 
     <ImageView
@@ -60,7 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:ems="10"
-        android:background="@drawable/second_outline_txv" />
+        android:background="@drawable/second_outline_txv"
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>
 

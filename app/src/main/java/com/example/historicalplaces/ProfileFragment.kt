@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.historicalplaces.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
-lateinit var binding: FragmentProfileBinding
+    lateinit var binding: FragmentProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,30 +22,60 @@ lateinit var binding: FragmentProfileBinding
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentProfileBinding.inflate(inflater,container,false)
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showSavedInfo()
+        viewClick()
 
     }
+
     private fun showSavedInfo() {
-        var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
-        binding.fullName.setText(saveInfo.getString("savedName",null))
-        binding.id.setText(saveInfo.getString("savedId",null))
-        binding.email.setText(saveInfo.getString("savedEmail",null))
-        binding.address.setText(saveInfo.getString("savedAddress",null))
-        binding.phone.setText(saveInfo.getString("savedPhone",null))
+        var saveInfo: SharedPreferences =
+            requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+        binding.fullName.setText(saveInfo.getString("savedName", null))
+        binding.id.setText(saveInfo.getString("savedId", null))
+        binding.email.setText(saveInfo.getString("savedEmail", null))
+        binding.address.setText(saveInfo.getString("savedAddress", null))
+        binding.phone.setText(saveInfo.getString("savedPhone", null))
         Glide.with(this)
-            .load(saveInfo.getString("urlPicture",null))
+            .load(saveInfo.getString("urlPicture", null))
             .circleCrop()
             .error(R.drawable.ic_baseline_person_24)
             .into(binding.profileImage)
     }
-    fun txvClick(view: View){
-        Toast.makeText(context, "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.", Toast.LENGTH_SHORT).show()
-    }
 
+    fun viewClick() {
+        binding.profileImage.setOnClickListener{
+            Toast.makeText(context, "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.", Toast.LENGTH_SHORT).show()
+        }
+        binding.fullName.setOnClickListener {
+            Toast.makeText(context, "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.", Toast.LENGTH_SHORT).show()
+        }
+        binding.id.setOnClickListener {
+            Toast.makeText(context, "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.", Toast.LENGTH_SHORT).show()
+        }
+        binding.email.setOnClickListener {
+            Toast.makeText(context, "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.", Toast.LENGTH_SHORT).show()
+        }
+        binding.address.setOnClickListener {
+            Toast.makeText(
+                context,
+                "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        binding.phone.setOnClickListener {
+            Toast.makeText(
+                context,
+                "برای ویرایش اطلاعات خود، وارد تنظیمات شوید.",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+    }
 }
