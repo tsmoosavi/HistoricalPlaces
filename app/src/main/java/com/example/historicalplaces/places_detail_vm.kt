@@ -13,10 +13,14 @@ class placesDetailVm:ViewModel() {
     var place2 = Place("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPWpEtc4bJm2AmjD9ZY9zEtRz5YXJxB-voZQ&usqp=CAU",R.string.bam,R.string.secondDetail)
     var place3 = Place("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfoAez9VXW5YqYe6vlAILHRKHw4ajkU5qjdQ&usqp=CAU",R.string.hegmatane,R.string.thirdDetail)
     var place4 = Place("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohoAxiP5fZ4qURf4wcTcjkHIgzb_U4DxMWw&usqp=CAU",R.string.jamshid,R.string.forthDetail)
+    var place5 = Place("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpYnFxXDfJ_IDD3JCNMFobx_pZohmnhHzzhw&usqp=CAU",R.string.mosque,R.string.fifthDetail)
+    var place6 = Place("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0eR2WWFMpNo7ST-wXsdTooa3tDncMINmp0Q&usqp=CAU",R.string.hafezie,R.string.sixthDetail)
     init {
         historicalPlacesList.add(place1)
         historicalPlacesList.add(place2)
         historicalPlacesList.add(place3)
         historicalPlacesList.add(place4)
+        historicalPlacesList.add(place5)
+        historicalPlacesList.add(place6)
     }
 }
