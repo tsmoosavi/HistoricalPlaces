@@ -14,7 +14,6 @@
 
 
     <LinearLayout
-        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -24,11 +23,9 @@
             android:backgroundTint="#78DDD3"
             android:background="@drawable/pink_outline_txv"
             android:padding="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="10dp"
             app:cardElevation="20dp"
-            android:elevation="40dp">
+            app:cardUseCompatPadding="true">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,8 +41,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="@color/purple_200"/>
-
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
