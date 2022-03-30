@@ -145,6 +145,7 @@
             android:layout_marginBottom="24dp"
             android:contentDescription="sentence"
             android:text="@string/point"
+            android:textSize="20sp"
             app:icon="@drawable/ic_baseline_highlight_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />

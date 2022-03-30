@@ -1,5 +1,8 @@
 package com.example.historicalplaces
 
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -36,8 +39,21 @@ class HomeFragment : Fragment() {
 
     private fun fabClick() {
         binding.pointFab.setOnClickListener{
-            Toast.makeText(context, Repository.randomsentence(), Toast.LENGTH_SHORT).show()
+           showSentence(requireActivity())
         }
+    }
+
+    private fun showSentence(activity: Activity) {
+        val builder: AlertDialog.Builder = activity.let {
+            AlertDialog.Builder(it)
+        }
+        builder.setMessage(Repository.randomsentence())
+            .setTitle("سخن نغز")
+            .setPositiveButton("خب", DialogInterface.OnClickListener{ dialog, id->})
+            .setCancelable(false)
+            .show()
+
+
     }
 
     private fun clicklistener() {
