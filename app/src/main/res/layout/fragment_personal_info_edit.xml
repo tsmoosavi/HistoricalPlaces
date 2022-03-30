@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:textAlignment="gravity"
+    android:textDirection="rtl"
     tools:context=".PersonalInfoEditFragment">
 
     <LinearLayout
@@ -18,34 +21,35 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
+            android:background="@drawable/second_outline_txv"
             android:ems="10"
             android:hint="@string/fullName"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:background="@drawable/second_outline_txv"/>
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/pink_outline_txv"
             android:ems="10"
             android:hint="@string/id"
             android:inputType="number"
-            android:minHeight="48dp"
             android:maxLength="10"
-            android:background="@drawable/pink_outline_txv"/>
+            android:minHeight="48dp" />
+
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
+            android:background="@drawable/second_outline_txv"
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:minHeight="48dp"
-            android:background="@drawable/second_outline_txv"/>
+            android:minHeight="48dp" />
 
 
         <EditText
@@ -54,36 +58,35 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
+            android:background="@drawable/pink_outline_txv"
             android:ems="10"
             android:hint="@string/address"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:background="@drawable/pink_outline_txv"
-            />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/second_outline_txv"
             android:ems="10"
             android:hint="@string/phone"
             android:inputType="number"
             android:maxLength="11"
-            android:minHeight="48dp"
-            android:background="@drawable/second_outline_txv"/>
+            android:minHeight="48dp" />
+
         <EditText
             android:id="@+id/profilePicture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
+            android:background="@drawable/pink_outline_txv"
             android:ems="10"
             android:hint="@string/profPic"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:background="@drawable/pink_outline_txv"/>
-
+            android:minHeight="48dp" />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/register"
             android:layout_width="match_parent"
@@ -93,6 +96,29 @@
             app:cornerRadius="20dp">
 
         </com.google.android.material.button.MaterialButton>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp">
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/showChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:bufferType="normal"
+                android:gravity="center"
+                android:verticalScrollbarPosition="defaultPosition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/showChoice" />
+
+
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

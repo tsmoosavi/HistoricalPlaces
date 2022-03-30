@@ -30,6 +30,7 @@ class PersonalInfoEditFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showInfo()
+        switch()
         binding.register.setOnClickListener{
             if (isfielsFull()){
                 saveInfo()
@@ -45,6 +46,7 @@ class PersonalInfoEditFragment : Fragment() {
         binding.address.setText(saveInfo.getString("savedAddress",null))
         binding.phone.setText(saveInfo.getString("savedPhone",null))
         binding.profilePicture.setText(saveInfo.getString("urlPicture",null))
+        binding.showChoice.isChecked = saveInfo.getBoolean("showInfo",false)
     }
 
     private fun saveInfo() {
@@ -58,6 +60,8 @@ class PersonalInfoEditFragment : Fragment() {
         editor.putString("urlPicture",binding.profilePicture.text.toString())
         editor.apply()
         Toast.makeText(context,"مشخصات شما ثبت شد.",Toast.LENGTH_SHORT).show()
+
+
     }
 
     fun isfielsFull():Boolean{
@@ -86,5 +90,21 @@ class PersonalInfoEditFragment : Fragment() {
             return false
         }
         return true
+    }
+    private fun switch() {
+        var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+        var editor = saveInfo.edit()
+        binding.showChoice.setOnCheckedChangeListener { compoundButton, choice ->
+            if (choice){
+                editor.putBoolean("showInfo",true)
+                editor.apply()
+                Toast.makeText(context, "on", Toast.LENGTH_SHORT).show()
+            }else {
+                editor.putBoolean("showInfo",false)
+                editor.apply()
+                Toast.makeText(context,"off", Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 }

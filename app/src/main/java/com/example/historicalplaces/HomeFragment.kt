@@ -2,7 +2,9 @@ package com.example.historicalplaces
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.content.Context
 import android.content.DialogInterface
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -32,9 +34,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        clicklistener()
+        viewclicklistener()
         fabClick()
+        showPersonalInfo()
 
+    }
+
+    private fun showPersonalInfo() {
+        var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
+        var editor = saveInfo.edit()
+        if (saveInfo.getBoolean("showInfo",false)){
+            binding.personalInfo.text = saveInfo.getString("savedName", null)+ " عزیز\nخوش آمدید"
+        }else{
+            binding.personalInfo.text = "گردشگر عزیز\n خوش آمدید"
+        }
     }
 
     private fun fabClick() {
@@ -56,7 +69,7 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun clicklistener() {
+    private fun viewclicklistener() {
         var layoutList = arrayListOf(binding.ll1, binding.ll2, binding.ll3, binding.ll4)
         for(i in 0 until layoutList.size)
        layoutList[i].setOnClickListener{
