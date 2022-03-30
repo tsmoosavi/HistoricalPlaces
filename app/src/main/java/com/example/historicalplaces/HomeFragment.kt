@@ -79,7 +79,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun initView() {
-        var layoutList = arrayListOf(binding.ll1, binding.ll2, binding.ll3, binding.ll4)
+        var layoutList = arrayListOf(binding.ll1, binding.ll2, binding.ll3, binding.ll4,binding.ll5,binding.ll6)
         for(i in 0 until layoutList.size){
             layoutList[i].visibility = View.GONE
         }
@@ -87,12 +87,36 @@ class HomeFragment : Fragment() {
         secondPlace()
         thirdPlace()
         forthPlace()
+        fifthPlace()
+        sixthPlace()
         for(i in 0 until placesVm.numberOfViews){
           layoutList[i].visibility = View.VISIBLE
         }
     }
-    private fun forthPlace() {
 
+    private fun sixthPlace() {
+        Glide.with(this)
+            .load(placesVm.place6.pictureURL)
+            .error(R.drawable.ic_launcher_background)
+            .circleCrop()
+            .into(binding.image6)
+        binding.ll6.setOnClickListener{
+            findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
+        }
+    }
+
+    private fun fifthPlace() {
+        Glide.with(this)
+            .load(placesVm.place5.pictureURL)
+            .error(R.drawable.ic_launcher_background)
+            .circleCrop()
+            .into(binding.image5)
+        binding.ll5.setOnClickListener{
+            findNavController().navigate(R.id.action_home_Fragment_to_detailFragment)
+        }
+    }
+
+    private fun forthPlace() {
             Glide.with(this)
                 .load(placesVm.place4.pictureURL)
                 .error(R.drawable.ic_launcher_background)
