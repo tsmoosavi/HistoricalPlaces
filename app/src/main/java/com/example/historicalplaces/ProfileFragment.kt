@@ -29,51 +29,21 @@ lateinit var binding: FragmentProfileBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showSavedInfo()
-        buttonClickListener()
-            Glide.with(this)
-                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXUA8i_XkolHaG72wChky5ycJP1xBBQ4gPA&usqp=CAU")
-                .circleCrop()
-                .error(R.drawable.ic_baseline_person_24)
-                .into(binding.profileImage)
     }
     private fun showSavedInfo() {
         var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
         binding.fullName.setText(saveInfo.getString("savedName",null))
         binding.id.setText(saveInfo.getString("savedId",null))
+        binding.email.setText(saveInfo.getString("savedEmail",null))
+        binding.address.setText(saveInfo.getString("savedAddress",null))
         binding.phone.setText(saveInfo.getString("savedPhone",null))
+        Glide.with(this)
+            .load(saveInfo.getString("urlPicture",null))
+            .circleCrop()
+            .error(R.drawable.ic_baseline_person_24)
+            .into(binding.profileImage)
 
     }
-    private fun buttonClickListener() {
-        binding.register.setOnClickListener{
-            if (isfielsFullAndCorrect()){
-                saveInfo()
 
-            }
-        }
-    }
-
-    fun isfielsFullAndCorrect():Boolean{
-        if (  binding.fullName.text.isNullOrBlank()){
-            binding.fullName.error = "این فیلد را پر کنید."
-            return false
-        }
-        if(binding.id.text.isNullOrBlank()){
-            binding.id.error = "این فیلد را پر کنید."
-            return false
-        }
-        if(binding.phone.text.isNullOrBlank()){
-            binding.phone.error = "این فیلد را پر کنید."
-            return false
-        }
-        return true
-    }
-    fun saveInfo(){
-        var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
-        var editor = saveInfo.edit()
-        editor.putString("savedName",binding.fullName.text.toString())
-        editor.putString("savedId",binding.id.text.toString())
-        editor.putString("savedPhone",binding.phone.text.toString())
-        editor.apply()
-    }
 
 }
