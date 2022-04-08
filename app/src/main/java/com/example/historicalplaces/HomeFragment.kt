@@ -7,7 +7,6 @@ import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -34,7 +33,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        viewclicklistener()
+        viewClicklistener()
         fabClick()
         showPersonalInfo()
 
@@ -69,7 +68,7 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun viewclicklistener() {
+    private fun viewClicklistener() {
         var layoutList = arrayListOf(binding.ll1, binding.ll2, binding.ll3, binding.ll4)
         for(i in 0 until layoutList.size)
        layoutList[i].setOnClickListener{
