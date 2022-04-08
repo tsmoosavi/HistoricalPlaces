@@ -59,13 +59,12 @@ class HomeFragment : Fragment() {
         val builder: AlertDialog.Builder = activity.let {
             AlertDialog.Builder(it)
         }
-        builder.setMessage(Repository.randomsentence())
+        builder.setView(R.layout.custom_dialog)
+            .setMessage(Repository.randomsentence())
             .setTitle("سخن نغز")
             .setPositiveButton("خب", DialogInterface.OnClickListener{ dialog, id->})
             .setCancelable(false)
             .show()
-
-
     }
 
     private fun viewClicklistener() {
