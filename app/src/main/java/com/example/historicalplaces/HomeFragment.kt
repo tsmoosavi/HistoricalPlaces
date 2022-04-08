@@ -9,6 +9,8 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.historicalplaces.databinding.FragmentHomeBinding
@@ -16,6 +18,7 @@ import com.example.historicalplaces.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     val placesVm:placesDetailVm by activityViewModels ()
+    val sentenceVm: SentenceVm by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -60,7 +63,7 @@ class HomeFragment : Fragment() {
             AlertDialog.Builder(it)
         }
         builder.setView(R.layout.custom_dialog)
-            .setMessage(Repository.randomsentence())
+            .setMessage(sentenceVm.randomsentence())
             .setTitle("سخن نغز")
             .setPositiveButton("خب", DialogInterface.OnClickListener{ dialog, id->})
             .setCancelable(false)
