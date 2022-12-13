@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
+
         binding.navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.exit ->{

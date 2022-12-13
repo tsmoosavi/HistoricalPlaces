@@ -91,6 +91,7 @@ class PersonalInfoEditFragment : Fragment() {
         }
         return true
     }
+
     private fun switch() {
         var saveInfo : SharedPreferences = requireActivity().getSharedPreferences("personalInformation", Context.MODE_PRIVATE)
         var editor = saveInfo.edit()

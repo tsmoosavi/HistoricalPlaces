@@ -1,5 +1,7 @@
 package com.example.historicalplaces
 
+
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.*
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.historicalplaces.databinding.FragmentSettingBinding
@@ -29,6 +32,7 @@ class SettingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_AUTO_TIME)
         setNumber()
         personalInfoEditButtonClick()
         bankInfoEditButtonClick()
@@ -50,11 +54,14 @@ class SettingFragment : Fragment() {
     }
 
     private fun lightTheme() {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+//        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_AUTO_TIME)
+//        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_FOLLOW_SYSTEM)
     }
 
     private fun darkTheme() {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
     }
 
     private fun personalInfoEditButtonClick() {
@@ -65,7 +72,7 @@ class SettingFragment : Fragment() {
 
     private fun setNumber() {
         binding.seekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
-            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+            override fun onProgressChanged(seek: SeekBar?, progress: Int, fromUser: Boolean) {
                 placeDetails.numberOfViews = binding.seekBar.progress
                 binding.seekBarNumber.text = placeDetails.numberOfViews.toString()
             }
